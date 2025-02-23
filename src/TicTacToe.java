@@ -85,11 +85,11 @@ public class TicTacToe extends JFrame implements ActionListener {
                 move = getRandomMove();
                 break;
             case INTERMEDIATE:
-                move = minimaxLimited(0, true, Integer.MIN_VALUE, Integer.MAX_VALUE, 3);
+                move = minimaxLimited(2, true, Integer.MIN_VALUE, Integer.MAX_VALUE, 3);
                 break;
             case HARD:
             default:
-                move = minimax(0, true, Integer.MIN_VALUE, Integer.MAX_VALUE);
+                move = minimax(10, true, Integer.MIN_VALUE, Integer.MAX_VALUE);
                 break;
         }
         board[move[1]][move[2]] = 'O';
